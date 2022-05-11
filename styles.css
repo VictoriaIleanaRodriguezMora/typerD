@@ -1,3 +1,106 @@
-.displayNone{
-    display: none;
+@font-face {
+  font-family: "Arvo-Regular";
+  src: url(./fonts/Arvo-Regular.ttf);
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Montserrat-Bold";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: bold;
+  font-style: weight;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url(./fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: weight;
+}
+@font-face {
+  font-family: "Montserrat-Italic";
+  src: url(./fonts/Montserrat-Italic-VariableFont_wght.ttf);
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  background-image: url("./fondo-asus.gif");
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  font-family: "Montserrat-Bold";
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.842);
+  width: 50%;
+  border-radius: 15px;
+  margin: 0 auto;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  padding: 1%;
+  box-sizing: border-box;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  padding: 1%;
+}
+h2 {
+  font-family: "Montserrat-Bold";
+}
+h1 {
+  font-family: "Montserrat-Italic";
+  background-color: rgba(255, 0, 0, 0.315);
+  padding: 3%;
+  border-radius: 15px;
+}
+.time-container {
+  background-color: rgba(65, 105, 225, 0.514);
+  padding: 3%;
+  border-radius: 15px;
+}
+.score-container {
+  background-color: rgba(225, 156, 65, 0.514);
+  padding: 3%;
+  border-radius: 15px;
+}
+.text {
+  padding: 2%;
+  width: 80%;
+  font-size: 1.5em;
+  border-radius: 15px;
+
+}
+.botonPlayAgain {
+  border-radius: 15px;
+  background-color: rgba(25, 156, 82, 0.445);
+  padding: 2%;
+  width: 80%;
+  font-size: 1em;
+}
+.tituloGameOver{
+    font-size: 1.5em;
+    width: 100%;
+}
+#end-game-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.displayNone {
+  display: none;
 }

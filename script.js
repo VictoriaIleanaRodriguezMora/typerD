@@ -98,10 +98,12 @@ function upDateScore() {
 function gameOver() {
     console.log("entra");
     let titulo = document.createElement("h1")
+    titulo.classList.add("tituloGameOver")
     titulo.textContent = "Te quedaste sin tiempo"
     let parrafo = document.createElement("p")
     parrafo.textContent = `tu puntaje: ${score}`
     let boton = document.createElement("button")
+    boton.classList.add("botonPlayAgain")
     boton.textContent = `play again`
     boton.onclick = () => {
         location.reload()
