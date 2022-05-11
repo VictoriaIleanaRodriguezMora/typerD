@@ -33,7 +33,7 @@ let spanScore = document.querySelector("#score")
 let palabraAleatoria = randomWords()
 let time = 10
 let score = 0
-let palabraIngresada
+let palabraIngresada;
 let timeInterval = setInterval(actualizarTiempo, 1000);
 let cont = 1
 
@@ -52,18 +52,23 @@ function addToDom() {
 addToDom()
 
 //evento tipo input
-input.addEventListener("input", function (e) {
+input.addEventListener("input", function () {
     palabraIngresada = input.value
     console.log(palabraIngresada);
     console.log(score);
     if (palabraIngresada == palabraAleatoria) {
+        console.log("no entra");
         time += 3
-        input.textContent = ""
+        upDateScore()
+        palabraIngresada = ""
+        input.value = ""
+        palabraAleatoria = randomWords()
+        addToDom()
     }
-    upDateScore()
-    addToDom()
-    palabraAleatoria = randomWords()
+
 })
+
+
 
 // //manipular el tiempo
 function actualizarTiempo() {
@@ -74,7 +79,7 @@ function actualizarTiempo() {
         clearInterval(setInterval)
         time = 3
         console.log("gameOver");
-        if (0 < cont){
+        if (0 < cont) {
             gameOver()
             cont = 0
         }
