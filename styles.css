@@ -24,7 +24,7 @@
 }
 
 body {
-  background-image: url("./fondo-asus.gif");
+  background-image: url("./img/fondo-asus.gif");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   display: flex;
@@ -59,9 +59,14 @@ body {
 }
 h2 {
   font-family: "Montserrat-Bold";
+  font-size: 2em;
+}
+p {
+  font-size: 1.2em;
 }
 h1 {
   font-family: "Montserrat-Italic";
+  font-size: 2em;
   background-color: rgba(255, 0, 0, 0.315);
   padding: 3%;
   border-radius: 15px;
@@ -70,29 +75,31 @@ h1 {
   background-color: rgba(65, 105, 225, 0.514);
   padding: 3%;
   border-radius: 15px;
+  font-size: 1.5em;
+  font-family: "Montserrat";
 }
 .score-container {
   background-color: rgba(225, 156, 65, 0.514);
   padding: 3%;
   border-radius: 15px;
+  font-size: 1.3em;
 }
 .text {
   padding: 2%;
   width: 80%;
   font-size: 1.5em;
   border-radius: 15px;
-
 }
 .botonPlayAgain {
   border-radius: 15px;
-  background-color: rgba(25, 156, 82, 0.445);
+  background-color: rgba(65, 105, 225, 0.514);
   padding: 2%;
   width: 80%;
-  font-size: 1em;
+  font-size: 2em;
 }
-.tituloGameOver{
-    font-size: 1.5em;
-    width: 100%;
+.tituloGameOver {
+  font-size: 1.5em;
+  width: 100%;
 }
 #end-game-container {
   display: flex;
@@ -104,3 +111,17 @@ h1 {
 .displayNone {
   display: none;
 }
+
+@media (max-width: 768px) {
+  body {
+    background-image: url("./img/tienda-asus.webp");
+  }
+  .container{
+    width: 70%;
+  }
+}
+@media (max-width: 500px) {
+    .container{
+      width: 90%;
+    }
+  }

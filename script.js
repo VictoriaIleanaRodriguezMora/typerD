@@ -101,9 +101,10 @@ function gameOver() {
     titulo.classList.add("tituloGameOver")
     titulo.textContent = "Te quedaste sin tiempo"
     let parrafo = document.createElement("p")
-    parrafo.textContent = `tu puntaje: ${score}`
+    parrafo.classList.add("score-container")
+    parrafo.textContent = `Tu puntaje es: ${score}`
     let boton = document.createElement("button")
-    boton.classList.add("botonPlayAgain")
+    boton.classList.add("time-container")
     boton.textContent = `play again`
     boton.onclick = () => {
         location.reload()
