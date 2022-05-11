@@ -40,7 +40,7 @@ let cont = 1
 
 //1
 function randomWords() {
-    let nroRandom = Math.floor(Math.random() * (words.length + 1))
+    let nroRandom = Math.floor(Math.random() * words.length)
 
     return words[nroRandom]
 }
