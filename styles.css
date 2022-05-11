@@ -32,6 +32,7 @@ body {
   align-content: center;
   align-items: center;
   font-family: "Montserrat-Bold";
+  margin-bottom: 5%;
 }
 
 .container {
@@ -116,12 +117,12 @@ h1 {
   body {
     background-image: url("./img/tienda-asus.webp");
   }
-  .container{
+  .container {
     width: 70%;
   }
 }
 @media (max-width: 500px) {
-    .container{
-      width: 90%;
-    }
+  .container {
+    width: 90%;
   }
+}

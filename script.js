@@ -53,7 +53,7 @@ addToDom()
 
 //evento tipo input
 input.addEventListener("input", function () {
-    palabraIngresada = input.value
+    palabraIngresada = input.value.toLocaleLowerCase()
     console.log(palabraIngresada);
     console.log(score);
     if (palabraIngresada == palabraAleatoria) {
