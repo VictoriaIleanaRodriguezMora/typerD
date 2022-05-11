@@ -33,17 +33,17 @@ let spanScore = document.querySelector("#score")
 let palabraAleatoria = randomWords()
 let time = 10
 let score = 0
-let palabraIngresada;
+let palabraIngresada
 let timeInterval = setInterval(actualizarTiempo, 1000);
+let cont = 1
 
 
 //1
 function randomWords() {
     let nroRandom = Math.floor(Math.random() * (words.length + 1))
-    return words[nroRandom]
 
+    return words[nroRandom]
 }
-// randomWords()
 
 //3
 function addToDom() {
@@ -53,40 +53,45 @@ addToDom()
 
 //evento tipo input
 input.addEventListener("input", function (e) {
-    console.log(e);
-    palabraIngresada = input
+    palabraIngresada = input.value
+    console.log(palabraIngresada);
+    console.log(score);
     if (palabraIngresada == palabraAleatoria) {
         time += 3
         input.textContent = ""
-        console.log(time);
-        addToDom()
-        upDateScore()
     }
+    upDateScore()
+    addToDom()
+    palabraAleatoria = randomWords()
 })
 
-//manipular el tiempo
+// //manipular el tiempo
 function actualizarTiempo() {
-
-
     timeSpan.textContent = time-- + "s"
-    console.log("chau");
+    console.log("actualizarTiempo");
 
     if (time === 0) {
-        console.log("hola");
         clearInterval(setInterval)
-        gameOver()
+        time = 3
+        console.log("gameOver");
+        if (0 < cont){
+            gameOver()
+            cont = 0
+        }
     }
+
 }
 
-//Funciones
-//updateScore
+// //Funciones
+// //updateScore
 function upDateScore() {
     score++
     spanScore.textContent = score
 }
 
-//gameOver
+// //gameOver
 function gameOver() {
+    console.log("entra");
     let titulo = document.createElement("h1")
     titulo.textContent = "Te quedaste sin tiempo"
     let parrafo = document.createElement("p")
@@ -94,8 +99,11 @@ function gameOver() {
     let boton = document.createElement("button")
     boton.textContent = `play again`
     boton.onclick = () => {
-        location.reload
+        location.reload()
     }
-    end_game_container.tagName
+    end_game_container.appendChild(titulo)
+    end_game_container.appendChild(parrafo)
+    end_game_container.appendChild(boton)
+    main.classList.add("displayNone")
 
 }
