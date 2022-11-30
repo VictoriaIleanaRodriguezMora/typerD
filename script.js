@@ -56,10 +56,7 @@ addToDom()
 
 input.addEventListener("input", function () {
     palabraIngresada = input.value.toLocaleLowerCase()
-    console.log(palabraIngresada);
-    console.log(score);
     if (palabraIngresada == palabraAleatoria) {
-        console.log("no entra");
         time += 3
         upDateScore()
         palabraIngresada = ""
@@ -75,12 +72,10 @@ input.addEventListener("input", function () {
 //manipular el tiempo
 function actualizarTiempo() {
     timeSpan.textContent = time-- + "s"
-    console.log("actualizarTiempo");
 
     if (time === 0) {
         clearInterval(setInterval)
         time = 3
-        console.log("gameOver");
         if (0 < cont) {
             gameOver()
             cont = 0
