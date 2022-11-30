@@ -9,33 +9,41 @@
   </head>
 
   <body>
-    <div class="container">
-      <div class="main">
-        <h2>⌨️ TYPER 3000 ⌨️</h2>
-        <p>Escribí la siguiente palabra:</p>
+    <div id="mainContainer">
 
-        <h1 id="randomWord"></h1>
+      <div class="container">
 
-        <input
-          type="text"
-          id="text"
-          class="text"
-          autocomplete="off"
-          placeholder="Type the word here..."
-        />
+        <div class="main">
+          <h2>⌨️ TYPER 3000 ⌨️</h2>
+          <p>Escribí la siguiente palabra:</p>
 
-        <p class="timeContainer">
-          Tiempo restante:
-          <span id="timeSpan">10s</span>
-        </p>
+          <h1 id="randomWord"></h1>
 
-        <p class="scoreContainer">
-          Score:
-          <span id="score">0</span>
-        </p>
+          <input
+            type="text"
+            id="text"
+            class="text"
+            autocomplete="off"
+            placeholder="Type the word here..."
+          />
+
+          <p class="timeContainer">
+            Tiempo restante:
+            <span id="timeSpan">10s</span>
+          </p>
+
+          <p class="scoreContainer">
+            Score:
+            <span id="score">0</span>
+          </p>
+        </div>
+
+        <div id="endGameContainer" class="endGameContainer"></div>
+        
       </div>
-      <div id="endGameContainer" class="endGameContainer"></div>
+
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>
