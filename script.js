@@ -19,6 +19,7 @@ const words = [
     'funky',
     'chili'
 ];
+
 let divContainer = document.querySelector(".container")
 let main = document.querySelector(".main")
 let h2 = document.querySelector("h2")
@@ -26,9 +27,9 @@ let p = document.querySelector("p")
 let randomWord = document.querySelector("#randomWord")
 let input = document.querySelector("input")
 let timeSpan = document.querySelector("#timeSpan")
-let time_container = document.querySelector(".time-container")
-let score_container = document.querySelector(".score-container")
-let end_game_container = document.querySelector("#end-game-container")
+let time_container = document.querySelector(".timeContainer")
+let score_container = document.querySelector(".scoreContainer")
+let endGameContainer = document.querySelector("#endGameContainer")
 let spanScore = document.querySelector("#score")
 let palabraAleatoria = randomWords()
 let time = 10
@@ -52,6 +53,7 @@ function addToDom() {
 addToDom()
 
 //evento tipo input
+
 input.addEventListener("input", function () {
     palabraIngresada = input.value.toLocaleLowerCase()
     console.log(palabraIngresada);
@@ -70,7 +72,7 @@ input.addEventListener("input", function () {
 
 
 
-// //manipular el tiempo
+//manipular el tiempo
 function actualizarTiempo() {
     timeSpan.textContent = time-- + "s"
     console.log("actualizarTiempo");
@@ -87,31 +89,34 @@ function actualizarTiempo() {
 
 }
 
-// //Funciones
-// //updateScore
+//updateScore
 function upDateScore() {
     score++
     spanScore.textContent = score
 }
 
-// //gameOver
+//gameOver
 function gameOver() {
-    console.log("entra");
+
     let titulo = document.createElement("h1")
     titulo.classList.add("tituloGameOver")
     titulo.textContent = "Te quedaste sin tiempo"
+
     let parrafo = document.createElement("p")
-    parrafo.classList.add("score-container")
+    parrafo.classList.add("scoreContainer")
     parrafo.textContent = `Tu puntaje es: ${score}`
+
     let boton = document.createElement("button")
-    boton.classList.add("time-container")
+    boton.classList.add("timeContainer")
     boton.textContent = `play again`
+
     boton.onclick = () => {
         location.reload()
     }
-    end_game_container.appendChild(titulo)
-    end_game_container.appendChild(parrafo)
-    end_game_container.appendChild(boton)
+
+    endGameContainer.appendChild(titulo)
+    endGameContainer.appendChild(parrafo)
+    endGameContainer.appendChild(boton)
     main.classList.add("displayNone")
 
 }

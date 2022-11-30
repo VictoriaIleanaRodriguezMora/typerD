@@ -4,18 +4,21 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Montserrat-Bold";
   src: url(./fonts/Montserrat-VariableFont_wght.ttf);
   font-weight: bold;
   font-style: weight;
 }
+
 @font-face {
   font-family: "Montserrat";
   src: url(./fonts/Montserrat-VariableFont_wght.ttf);
   font-weight: normal;
   font-style: weight;
 }
+
 @font-face {
   font-family: "Montserrat-Italic";
   src: url(./fonts/Montserrat-Italic-VariableFont_wght.ttf);
@@ -48,6 +51,7 @@ body {
   padding: 1%;
   box-sizing: border-box;
 }
+
 .main {
   display: flex;
   flex-direction: column;
@@ -58,13 +62,16 @@ body {
   font-family: "Montserrat";
   padding: 1%;
 }
+
 h2 {
   font-family: "Montserrat-Bold";
   font-size: 2em;
 }
+
 p {
   font-size: 1.2em;
 }
+
 h1 {
   font-family: "Montserrat-Italic";
   font-size: 2em;
@@ -72,25 +79,29 @@ h1 {
   padding: 3%;
   border-radius: 15px;
 }
-.time-container {
+
+.timeContainer {
   background-color: rgba(65, 105, 225, 0.514);
   padding: 3%;
   border-radius: 15px;
   font-size: 1.5em;
   font-family: "Montserrat";
 }
-.score-container {
+
+.scoreContainer {
   background-color: rgba(225, 156, 65, 0.514);
   padding: 3%;
   border-radius: 15px;
   font-size: 1.3em;
 }
+
 .text {
   padding: 2%;
   width: 80%;
   font-size: 1.5em;
   border-radius: 15px;
 }
+
 .botonPlayAgain {
   border-radius: 15px;
   background-color: rgba(65, 105, 225, 0.514);
@@ -98,17 +109,20 @@ h1 {
   width: 80%;
   font-size: 2em;
 }
+
 .tituloGameOver {
   font-size: 1.5em;
   width: 100%;
 }
-#end-game-container {
+
+#endGameContainer {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
 }
+
 .displayNone {
   display: none;
 }
@@ -117,10 +131,12 @@ h1 {
   body {
     background-image: url("./img/tienda-asus.webp");
   }
+
   .container {
     width: 70%;
   }
 }
+
 @media (max-width: 500px) {
   .container {
     width: 90%;
